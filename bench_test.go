@@ -102,7 +102,7 @@ func BenchmarkServerFooRawFastCodec(bench *testing.B) {
 		io.Copy(ioutil.Discard, conn2)
 	}()
 
-	msg := []byte(`{"method": "FooService.Foo","id": 123,"params": [{"a": "a", "b": "b", "c": "c", "d": "d", "e": "e", "f": "f", "g": "g"}]}
+	msg := []byte(`{"method": "FooService.FooRaw","id": 123,"params": [{"a": "a", "b": "b", "c": "c", "d": "d", "e": "e", "f": "f", "g": "g"}]}
 `)
 
 	bench.ResetTimer()
